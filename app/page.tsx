@@ -1,7 +1,15 @@
+import React from 'react';
+import Home from './pages/home';
+import Header from './components/header';
 
 
-export default function Home() {
+const App: React.FC = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24"><h2>My project</h2></main>
+    <div>
+      <Header />
+      <Home />
+    </div>
   );
-}
+};
+
+export default App;

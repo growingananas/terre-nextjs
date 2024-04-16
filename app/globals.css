@@ -15,9 +15,33 @@
 body {
   color: rgb(var(--foreground-rgb));
 }
-
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .h-750 {
+    height: 750px;
+  }
+
+  .h-500 {
+    height: 500px;
+  }
+
+  .hover-underline:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .font-lora {
+    font-family: 'Lora', serif;
+  }
+  .about-us-btn:hover {
+    transform: scale(1.2);
   }
 }
+
+@layer components {
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-lora; 
+  }
+}
+
+
+
