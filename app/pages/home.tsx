@@ -1,7 +1,12 @@
 'use client'
 import React from 'react';
+
 import Image from 'next/image';
-import home2 from '../../public/home2.png'
+import home2 from '../../public/home2.png';
+import home3 from '../../public/home3.png';
+import home4 from '../../public/home4.png';
+import clock from '../../public/clock.svg';
+
 import { SwiperImage } from '../types';
 import { useState } from "react";
 import CarouselThumbs from '../components/carouselThumbs';
@@ -23,7 +28,7 @@ const Home: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-black opacity-50 top-0 left-0"></div>
         <div className="absolute inset-0 bg-gradient-to-br from-black opacity-0 top-0 left-0"></div>
 
-        <div className="relative container mx-auto top-40  md:top-80 px-2 md:px-4 xl:px-0">
+        <div className="relative container mx-auto top-40  md:top-80 px-2 md:px-8 xl:px-0">
           <h1 className="text-5xl md:text-8xl lg:text-9xl text-white mb-6">Terre restaurant</h1>
           <div className="md:flex flex-row items-center pb-4">
             <p className="order-2 block text-white max-w-md md:ml-4">We have beautiful and fun things coming up on the patio this summer. Now it only needs to… be summer. To be continued!</p>
@@ -37,7 +42,7 @@ const Home: React.FC = () => {
       </section>
 
       <section className='overflow-hidden'>
-        <div className="container mx-auto  max-h-min xl:max-h-[750px] px-2 md:px-4 xl:px-0 py-8 md:pb-0">
+        <div className="container mx-auto  max-h-min xl:max-h-[750px] px-2 md:px-8 xl:px-0 py-8 md:pb-0">
           <div className='xl:flex flex-row justify-between'>
             <p className="montez md:text-xl lg:text-2xl xl:text-right order-2">We could not be prouder to be.</p>
 
@@ -45,7 +50,7 @@ const Home: React.FC = () => {
           </div>
 
           <div className="xl:flex xl:ml-auto xl:max-w-3xl">
-            <div className="text-sm xl:justify-end">
+            <div className="text-sm xl:justify-end text-black">
               <p className='mb-2'>It only took one visit to Newfoundland & Labrador for Chef Matthew Swift to pack-up everything he owned and make St. John’s his new home.</p>
               <p className='mb-2'>Heading kitchens in Ontario and Quebec restaurants, including Montreal institution Joe Beef, for two decades was the perfect primer for Matthew to break out on his own. Inspired by the provinces people, food, produce, history and jaw-dropping landscapes, Matthew and his incredible team have created a welcoming comfortable space that reflects and respects it’s environment.</p>
               <p className='mb-6'>In 2021, Terre was selected as one of ‘Canada’s Best New Restaurants’ by enRoute Magazine’s expert food panel. We could not be prouder to be part of this prestigious list.
@@ -54,8 +59,8 @@ const Home: React.FC = () => {
           </div>
 
           <div className="xl:flex justify-end">
-            <button className="h-12 w-full md:max-w-72 border-solid border-2 border-[#00857A] hover:bg-[#00857A] hover:text-white">
-              <span className="lowercase p-3 font-bold">Read the full enroute story</span>
+            <button className="h-12 w-full md:max-w-72 border-solid border-2 text-black font-bold border-[#00857A] hover:bg-[#00857A] hover:text-white">
+              <span className="lowercase p-3 ">Read the full enroute story</span>
             </button>
           </div>
 
@@ -80,7 +85,53 @@ const Home: React.FC = () => {
 
       <CarouselImage images={images} thumbsSwiper={thumbsSwiper} />
       <CarouselThumbs images={images} setThumbsSwiper={setThumbsSwiper} />
+
+      <section className='-translate-y-16'>
+        <div className="container mx-auto max-h-min xl:max-h-[750px] px-2 md:px-8 xl:px-0">
+          <div className='mb-8 xl:flex items-center'>
+            <div className='order-2 xl:mr-auto xl:pl-20'>
+              <p className="montez md:text-xl">work time</p>
+
+              <h2 className="subtitle md:text-5xl lg:text-6xl mb-3">restaurant</h2>
       
+              <div className='mb-7 md:flex flex-row xl:flex-col md:space-x-32 xl:space-x-0'>
+                <div className='flex flex-row items-center py-2'>
+                  <Image src={clock} alt="" />
+                  <p className="text-black lowercase ml-4 md:text-xl"><span className=" font-bold">Friday:</span> 8AM {'\u2013'} 11:30AM</p>
+                </div>
+
+                <div className='flex flex-row items-center py-2'>
+                  <Image src={clock} alt="" />
+                  <p className="text-black lowercase ml-4 md:text-xl"><span className=" font-bold">Saturday & Sunday:</span> 9AM {'\u2013'} 2:00PM</p>
+                </div>
+              </div>
+            </div>
+            
+              <div className="order-1 sm:-mx-4 md:mx-0 xl:w-[650px] xl:h-[500px]"> 
+                <Image src={home3} alt='' className='w-screen'/>
+              </div>
+          </div>
+
+          <div className='xl:flex xl:justify-between items-center'>
+            <div className='order-1'>
+              <p className="montez md:text-xl lg:text-2xl">work time</p>
+
+              <h2 className="subtitle md:text-5xl lg:text-6xl mb-3 lowercase">CAFÉ</h2>
+
+              <div className='mb-7'>
+                <div className='flex flex-row items-center py-2'>
+                  <Image src={clock} alt="" />
+                  <p className="text-black lowercase ml-4 md: text-xl"><span className=" font-bold">Breakfast & Lunch:</span> Every day from 8AM {'\u2013'} 3PM</p>
+                </div>
+              </div>
+            </div>
+  
+            <div className="order-2 sm:-mx-4 md:mx-0 xl:w-[650px] xl:h-[500px]"> 
+              <Image src={home4} alt='' className='w-screen h-full'/>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 };

@@ -4,7 +4,7 @@ import { Arsenal } from "next/font/google";
 import "./globals.css";
 
 export const arsenal = Arsenal({
-  weight: "400",
+  weight: ["400", "700"],
   subsets: ['latin'],
   display: 'swap',
 })

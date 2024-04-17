@@ -7,7 +7,7 @@ import logo from '../../public/logo.png'
 
 const Header: React.FC  = () => {
   return (
-    <header className="absolute z-10 top-0 left-0 right-0 text-white py-4 px-2 md:px-4 xl:px-0">
+    <header className="absolute z-10 top-0 left-0 right-0 text-white py-4 px-2 md:px-8 xl:px-0">
       <div className="container mx-auto border-b border-solid border-white border-opacity-40 mb-6">
         <nav className="flex justify-between items-end pb-4">
           <div >
