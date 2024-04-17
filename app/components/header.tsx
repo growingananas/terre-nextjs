@@ -7,7 +7,7 @@ import logo from '../../public/logo.png'
 
 const Header: React.FC  = () => {
   return (
-    <header className="absolute z-10 top-0 left-0 right-0 text-white py-4 px-2">
+    <header className="absolute z-10 top-0 left-0 right-0 text-white py-4 px-2 md:px-4 xl:px-0">
       <div className="container mx-auto border-b border-solid border-white border-opacity-40 mb-6">
         <nav className="flex justify-between items-end pb-4">
           <div >
@@ -38,7 +38,6 @@ const Header: React.FC  = () => {
       <div className='flex justify-end  container mx-auto'>
         <p className="border-l border-solid border-white border-opacity-40 pl-4">{`125 Water street st. john's, nl 709 383 2136`}</p>
       </div>
-     
     </header>
   )
 }

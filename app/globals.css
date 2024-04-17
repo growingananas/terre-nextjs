@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
   --foreground-rgb: 0, 0, 0;
 }
@@ -34,6 +35,19 @@ body {
   }
   .about-us-btn:hover {
     transform: scale(1.2);
+  }
+
+  .montez {
+    font-family: 'Montez', cursive;
+    color: #00857A;
+    font-size: 17px;
+  }
+
+  .subtitle {
+    font-family: 'Lora', serif;
+    font-weight: 500;
+    font-size: 40px;
+    color: black;
   }
 }
 
