@@ -26,7 +26,6 @@ export default function CarouselImage({ images, thumbsSwiper }) {
               width={450}
               height={450}
               className="w-full h-96 md:h-[750px]"
-              aspectRatio={1}
             />
           </SwiperSlide>
         ))}

@@ -43,11 +43,39 @@ body {
     font-size: 17px;
   }
 
+  .montez-white {
+    font-family: 'Montez', cursive;
+    font-size: 17px;
+    color: white;
+  }
   .subtitle {
     font-family: 'Lora', serif;
     font-weight: 500;
     font-size: 40px;
     color: black;
+  }
+  .subtitle-white {
+    font-family: 'Lora', serif;
+    font-weight: 500;
+    font-size: 40px;
+    color: white;
+  }
+
+  .input {
+    background-color: transparent;
+    border-bottom: 1px solid #DDDDDD;
+    padding-bottom: 2vh;
+  }
+
+  .error {
+    color: rgb(225, 71, 71);
+    text-align: left;
+  }
+
+  .footer-title {
+    font-weight: 700;
+    font-size: 17px;
+    text-transform: uppercase;
   }
 }
 

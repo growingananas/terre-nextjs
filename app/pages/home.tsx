@@ -6,11 +6,14 @@ import home2 from '../../public/home2.png';
 import home3 from '../../public/home3.png';
 import home4 from '../../public/home4.png';
 import clock from '../../public/clock.svg';
+import logo from '../../public/logo.png'
 
 import { SwiperImage } from '../types';
 import { useState } from "react";
 import CarouselThumbs from '../components/carouselThumbs';
 import CarouselImage from '../components/carouselImage';
+import FormComponent from '../components/form';
+import Link from 'next/link';
 
 const images: SwiperImage[] = [
   { src: '/swiper1.png', alt: 'Image 1' },
@@ -30,8 +33,8 @@ const Home: React.FC = () => {
 
         <div className="relative container mx-auto top-40  md:top-80 px-2 md:px-8 xl:px-0">
           <h1 className="text-5xl md:text-8xl lg:text-9xl text-white mb-6">Terre restaurant</h1>
-          <div className="md:flex flex-row items-center pb-4">
-            <p className="order-2 block text-white max-w-md md:ml-4">We have beautiful and fun things coming up on the patio this summer. Now it only needs to… be summer. To be continued!</p>
+          <div className="md:flex flex-row items-center pb-4 md: text-lg">
+            <p className="order-2 block text-white max-w-md md:ml-4 ">We have beautiful and fun things coming up on the patio this summer. Now it only needs to… be summer. To be continued!</p>
 
             <button className="order-1 mt-6 md:m-0 relative overflow-hidden rounded-full text-2xl leading-7 h-32 w-32 p-0 flex flex-col justify-center items-center bg-white transition-all duration-300 hover:bg-transparent border border-white about-us-btn" style={{ transitionDuration: '300ms' }}>
               <span className="z-10 text-black transition-all duration-300 hover:text-white">About <br/>us</span>
@@ -107,7 +110,7 @@ const Home: React.FC = () => {
               </div>
             </div>
             
-              <div className="order-1 sm:-mx-4 md:mx-0 xl:w-[650px] xl:h-[500px]"> 
+              <div className="order-1 -mx-2 md:mx-0 xl:w-[650px] xl:h-[500px]"> 
                 <Image src={home3} alt='' className='w-screen'/>
               </div>
           </div>
@@ -126,12 +129,77 @@ const Home: React.FC = () => {
               </div>
             </div>
   
-            <div className="order-2 sm:-mx-4 md:mx-0 xl:w-[650px] xl:h-[500px]"> 
+            <div className="order-2 -mx-2 md:mx-0 xl:w-[650px] xl:h-[500px]"> 
               <Image src={home4} alt='' className='w-screen h-full'/>
             </div>
           </div>
         </div>
       </section>
+
+      <section className='-translate-y-16 md:translate-y-0 xl:pt-72'>
+        <div className="relative max-h-max md:h-750 bg-cover bg-center" style={{backgroundImage: 'url("/form.png")'}}>
+          <div className="absolute inset-0 bg-black opacity-70"></div>
+          
+          <div className='relative top-1/4 container mx-auto max-w-2xl text-center py-12  px-2 md:px-8 xl:px-0 '>
+            <p className="montez-white md:text-xl lg:text-2xl !important">book a table</p>
+
+            <h2 className="subtitle-white md:text-5xl lg:text-6xl mb-3 lowercase">book a table</h2>
+            
+            <FormComponent />
+          </div>
+        </div>
+      </section>
+
+      <footer className='-mt-16 md:mt-0 h-max bg-black text-white'>
+        <div className="container mx-auto py-8 px-8">
+          <div className="flex justify-center py-2">
+            <Link href="/">
+              <Image 
+                src={logo}
+                alt="Terre Logo" 
+                style={{ filter: 'brightness(0) invert(1)'}} 
+                loading="lazy"
+                className="w-32 h-auto md:w-32 lg:w-36"
+              />
+            </Link>
+          </div>
+
+          <div className='flex  flex-row flex-wrap gap-5'>
+            <div className='flex-1 w-1/3'>
+              <h2 className="footer-title">sitemap</h2>
+                <ul className='text-sm'>
+                  <li><a href="" >menu</a></li>
+                  <li> <a href="" >book now</a></li>
+                </ul>
+            </div>
+
+            <div className='flex-2 w-1/3'>
+              <h2 className="footer-title">Address</h2>
+              <p className='text-sm'>125 water streetst. john’s, nl a1c 5x4</p>
+            </div>
+
+            <div className='flex-1 w-1/3'>
+              <h2 className="footer-title">contacts</h2>
+              <p>+7 09 383 2136</p>
+              <p>info@terrerestaurant.com</p>
+            </div>
+
+            <div className='flex-2 w-1/3'>
+              <h2 className="footer-title">other</h2>
+              <ul className='text-sm'>
+                <li><a href="" >privacy</a></li>
+                <li> <a href="">terms</a></li>
+              </ul>
+            </div>
+          </div>
+
+          {/* <div>
+            <div>
+          
+            </div>
+          </div> */}
+        </div>
+      </footer>
     </>
   );
 };
