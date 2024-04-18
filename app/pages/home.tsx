@@ -6,7 +6,9 @@ import home2 from '../../public/home2.png';
 import home3 from '../../public/home3.png';
 import home4 from '../../public/home4.png';
 import clock from '../../public/clock.svg';
-import logo from '../../public/logo.png'
+import logo from '../../public/logo.png';
+import facebook from '../../public/facebook.svg';
+import insta from '../../public/inst.svg';
 
 import { SwiperImage } from '../types';
 import { useState } from "react";
@@ -151,53 +153,69 @@ const Home: React.FC = () => {
       </section>
 
       <footer className='-mt-16 md:mt-0 h-max bg-black text-white'>
-        <div className="container mx-auto py-8 px-8">
-          <div className="flex justify-center py-2">
+        <div className="py-10 px-6">
+          <div className="flex justify-center xl:block xl:relative xl:top-16 xl:left-16">
             <Link href="/">
               <Image 
                 src={logo}
                 alt="Terre Logo" 
                 style={{ filter: 'brightness(0) invert(1)'}} 
                 loading="lazy"
-                className="w-32 h-auto md:w-32 lg:w-36"
+                className="w-32 h-auto md:w-60 lg:w-60 lg:w-36"
               />
             </Link>
           </div>
 
-          <div className='flex  flex-row flex-wrap gap-5'>
-            <div className='flex-1 w-1/3'>
+          <div className='grid grid-cols-2 gap-x-7 gap-y-6 md:grid-cols-4 mt-6 md:text-base xl:w-2/4 xl:ml-auto'>
+            <div className=''>
               <h2 className="footer-title">sitemap</h2>
-                <ul className='text-sm'>
-                  <li><a href="" >menu</a></li>
-                  <li> <a href="" >book now</a></li>
-                </ul>
+              <ul className='text-sm space-y-2 md:text-base'>
+                <li><a href="">menu</a></li>
+                <li><a href="">book now</a></li>
+              </ul>
             </div>
 
-            <div className='flex-2 w-1/3'>
+            <div className=''>
               <h2 className="footer-title">Address</h2>
-              <p className='text-sm'>125 water streetst. john’s, nl a1c 5x4</p>
+              <p className='text-sm md:text-base'>125 water streetst. john’s, nl a1c 5x4</p>
             </div>
 
-            <div className='flex-1 w-1/3'>
+            <div className='space-y-2 md:text-base'>
               <h2 className="footer-title">contacts</h2>
               <p>+7 09 383 2136</p>
               <p>info@terrerestaurant.com</p>
             </div>
-
-            <div className='flex-2 w-1/3'>
+    
+            <div className=''>
               <h2 className="footer-title">other</h2>
-              <ul className='text-sm'>
-                <li><a href="" >privacy</a></li>
-                <li> <a href="">terms</a></li>
+              <ul className='text-sm space-y-2 md:text-base'>
+                <li><a href="">privacy</a></li>
+                <li><a href="">terms</a></li>
               </ul>
             </div>
           </div>
 
-          {/* <div>
-            <div>
-          
+          <div className='container mx-auto flex justify-center space-x-4 mt-6 xl:relative xl:justify-start xl:bottom-10'>
+            <div className='inline-block w-10 h-10'>
+              <Link href="/">
+                <Image 
+                  src={facebook}
+                  alt="Facebook Logo" 
+                  loading="lazy"
+                />
+              </Link>
             </div>
-          </div> */}
+
+            <div className='inline-block w-10 h-10'>
+              <Link href="/">
+                <Image 
+                  src={insta}
+                  alt="Facebook Logo" 
+                  loading="lazy"
+                />
+              </Link>
+            </div>
+          </div>
         </div>
       </footer>
     </>
