@@ -77,6 +77,13 @@ body {
     font-size: 17px;
     text-transform: uppercase;
   }
+  .image {
+    max-width: 480px;
+    @media (max-width: 768px) {
+      width: 224px
+    }
+    
+  }
 }
 
 @layer components {
