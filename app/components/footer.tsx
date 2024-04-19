@@ -25,27 +25,29 @@ const Footer: React.FC  = () => {
         <div className=''>
           <h2 className="footer-title">sitemap</h2>
           <ul className='text-sm space-y-1 md:text-base mt-2'>
-            <li><a href="">menu</a></li>
-            <li><a href="">book now</a></li>
+            <li><Link href="">menu</Link></li>
+            <li><Link href="">book now</Link></li>
           </ul>
         </div>
 
         <div className=''>
           <h2 className="footer-title">Address</h2>
-          <p className='text-sm md:text-base mt-2'>125 water streetst. john’s, nl a1c 5x4</p>
+          <Link href="https://maps.app.goo.gl/JxaZ9TTEfZXkkwsJ6" target="_blank" className='text-sm md:text-base mt-2'>125 water streetst. john’s, nl a1c 5x4</Link>
         </div>
 
-        <div className='space-y-1 md:text-base'>
+        <div className='md:text-base'>
           <h2 className="footer-title">contacts</h2>
-          <p className='mt-2'>+7 09 383 2136</p>
-          <p>info@terrerestaurant.com</p>
+          <ul className='text-sm space-y-1 md:text-base mt-2'>
+            <li><Link href="tel:+7 09 383 2136" className=''>+7 09 383 2136</Link></li>
+            <li><Link href="mailto:info@terrerestaurant.com" className=''>info@terrerestaurant.com</Link></li>
+          </ul>
         </div>
 
         <div className=''>
           <h2 className="footer-title">other</h2>
           <ul className='text-sm space-y-1 md:text-base mt-2'>
-            <li><a href="">privacy</a></li>
-            <li><a href="">terms</a></li>
+            <li><Link href="jih">privacy</Link></li>
+            <li><Link href="">terms</Link></li>
           </ul>
         </div>
       </div>
