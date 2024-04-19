@@ -1,13 +1,41 @@
 'use client'
-import React from 'react'
+import React, { useState, useEffect } from 'react';
+import BurgerMenu from './burger-menu';
 import Image from 'next/image';
 import LanguageSwitcher from './languageSwitcher';
 import Link from 'next/link';
 import logo from '../../public/logo.png'
 
 const Header: React.FC  = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setIsOpen(false);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [isOpen]);
+
   return (
-    <header className="absolute z-10 top-0 left-0 right-0 text-white py-4 px-2 md:px-8 xl:px-0">
+    <header className={`absolute z-10 top-0 left-0 right-0 text-white py-4 px-2 md:px-8 xl:px-0 ${isOpen ? 'bg-black' : ''}`}>
       <div className="container mx-auto border-b border-solid border-white border-opacity-40 mb-6">
         <nav className="flex justify-between items-end pb-4">
           <div >
@@ -24,7 +52,7 @@ const Header: React.FC  = () => {
             </Link>
           </div>
 
-          <div className="hidden lg:flex space-x-8 items-center">
+          <div className="hidden md:flex space-x-8 items-center">
             <ul className="flex space-x-8">
               <li><Link href="#" className="hover-underline">menu</Link></li>
               <li><Link href="#" className="hover-underline">book now</Link></li>
@@ -32,6 +60,8 @@ const Header: React.FC  = () => {
             </ul>
             <LanguageSwitcher />
           </div>
+
+          <BurgerMenu isOpen={isOpen} toggleMenu={toggleMenu} />
         </nav>
       </div>
 

@@ -41,7 +41,7 @@ const Home: React.FC = () => {
             <p className="order-2 block text-white max-w-md md:ml-4 ">We have beautiful and fun things coming up on the patio this summer. Now it only needs to… be summer. To be continued!</p>
 
             <button className="order-1 mt-6 md:m-0 relative overflow-hidden rounded-full text-2xl leading-7 h-32 w-32 p-0 flex flex-col justify-center items-center bg-white transition-all duration-300 hover:bg-transparent border border-white about-us-btn" style={{ transitionDuration: '300ms' }}>
-              <span className="z-10 text-black transition-all duration-300 hover:text-white">About <br/>us</span>
+              <span className="z-2 text-black transition-all duration-300 hover:text-white">About <br/>us</span>
               <span className="absolute inset-0 bg-black opacity-0 transition-all duration-300"></span>
             </button>
           </div>

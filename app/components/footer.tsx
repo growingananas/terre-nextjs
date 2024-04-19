@@ -54,17 +54,16 @@ const Footer: React.FC  = () => {
         <div className='inline-block w-10 h-10'>
           <Link href="/">
             <Image 
-              src={facebook}
-              alt="Facebook Logo" 
+              src={insta}
+              alt="Instagram Logo" 
               loading="lazy"
             />
           </Link>
         </div>
-
         <div className='inline-block w-10 h-10'>
           <Link href="/">
             <Image 
-              src={insta}
+              src={facebook}
               alt="Facebook Logo" 
               loading="lazy"
             />

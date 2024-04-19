@@ -11,7 +11,7 @@ export default function CarouselThumbs({ images, setThumbsSwiper }) {
       freeMode={true}
       observer={true}
       observeParents={true}
-      style={{ zIndex: 100, transform: 'translateY(-120%)', width: 300, height: 90, marginLeft: 'auto', marginRight: 20}}
+      style={{ zIndex: 4, transform: 'translateY(-120%)', width: 300, height: 90, marginLeft: 'auto', marginRight: 20}}
     >
       {images?.map((item) => (
         <SwiperSlide
