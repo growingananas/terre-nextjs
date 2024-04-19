@@ -5,7 +5,11 @@ import facebookWhite from '../../public/facebook-white.svg';
 import instaWhite from '../../public/insta-white.svg';
 import LanguageSwitcher from './languageSwitcher';
 
-const BurgerMenu = ({ isOpen, toggleMenu }) => {
+interface BurgerMenuProps {
+  isOpen: boolean;
+  toggleMenu: () => void;
+}
+const BurgerMenu = ({ isOpen, toggleMenu }: BurgerMenuProps) => {
   return (
     <div className="md:hidden">
       {isOpen ? (
