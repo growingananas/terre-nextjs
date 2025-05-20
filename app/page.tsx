@@ -144,7 +144,7 @@ const Home: React.FC = () => {
         <div className="relative max-h-max md:h-750 bg-cover bg-center" style={{backgroundImage: 'url("/form.png")'}}>
           <div className="absolute inset-0 bg-black opacity-70"></div>
           
-          <div className='relative top-1/4 container mx-auto max-w-2xl text-center py-12  px-2 md:px-8 xl:px-0 '>
+          <div className='relative top-0 container mx-auto max-w-2xl text-center py-12  px-2 md:px-8 xl:px-0 '>
             <p className="montez-white md:text-xl lg:text-2xl !important">book a table</p>
 
             <h2 className="subtitle-white md:text-5xl lg:text-6xl mb-3 lowercase">book a table</h2>
